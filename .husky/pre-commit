@@ -1,0 +1,8 @@
+#!/bin/bash
+# Run lint-staged for file-specific checks
+npx lint-staged
+
+# Run tests to ensure nothing is broken
+npm run test
+
+echo "Pre-commit checks completed successfully!"

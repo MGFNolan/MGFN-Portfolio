@@ -1,3 +1,5 @@
+# TEST DEPLOYMENT
+
 # MGFN Portfolio
 
 A modern, responsive portfolio website showcasing my work as a frontend developer. Built with React, TypeScript, and Tailwind CSS, featuring accessibility-first design and smooth animations.

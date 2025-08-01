@@ -2,19 +2,11 @@
 import { render } from "@testing-library/react";
 import { run } from "axe-core";
 import { describe, it, expect } from "vitest";
-
-const GoodComponent = () => (
-    <div>
-        <img src="test.jpg" alt="Test image" />
-        <button>Good button</button>
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" />
-    </div>
-);
+import AccessibilityTest from "../AccessibilityTest";
 
 describe("Accessibility Tests", () => {
     it("should not have accessibility violations", async () => {
-        const { container } = render(<GoodComponent />);
+        const { container } = render(<AccessibilityTest />);
         const results = await run(container);
 
         if (results.violations.length > 0) {

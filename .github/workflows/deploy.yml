@@ -1,0 +1,59 @@
+name: Build and Deploy Portfolio
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    # First job: Build and test the application
+    build-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "18"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            # Run fast tests first - unit tests and linting
+            - name: Run ESLint
+              run: npm run lint
+
+            - name: Run unit and component tests
+              run: npm run test:run
+
+            - name: Build project
+              run: npm run build
+
+            - name: Upload build artifacts
+              uses: actions/upload-pages-artifact@v2
+              with:
+                  path: ./dist
+
+    # Second job: Deploy to GitHub Pages
+    deploy:
+        needs: build-and-test
+        if: github.ref == 'refs/heads/main'
+        runs-on: ubuntu-latest
+
+        permissions:
+            pages: write
+            id-token: write
+
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v2

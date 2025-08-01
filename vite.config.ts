@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [react(), tailwindcss()],
+    base: "/MGFN-Portfolio/",
     test: {
         environment: "jsdom",
         setupFiles: ["./src/test/setup.ts"],

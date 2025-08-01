@@ -1,0 +1,71 @@
+name: Build and Deploy Portfolio
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    # First job: Comprehensive quality checks and build
+    build-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22.13.1"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            # Each of these steps will fail the job if they encounter problems
+            # This ensures that any quality issue prevents deployment
+            - name: Run ESLint (Code Quality Check)
+              run: npm run lint
+
+            - name: Run Unit and Component Tests
+              run: npm run test:run
+
+            # Add accessibility testing as a quality gate
+            - name: Run Accessibility Tests
+              run: npm run test:run -- accessibility
+
+            - name: Build Production Site
+              run: npm run build
+
+            # Only upload build artifacts if we're pushing to main (not on PRs)
+            # and all previous steps have succeeded
+            - name: Upload build artifacts for deployment
+              if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: ./dist
+
+    # Second job: Deploy only if build-and-test completed successfully
+    deploy:
+        # This job depends on build-and-test completing successfully
+        needs: build-and-test
+
+        # Triple condition: must be main branch, must be push event, must not be PR
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push' && needs.build-and-test.result == 'success'
+
+        runs-on: ubuntu-latest
+
+        permissions:
+            pages: write
+            id-token: write
+
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4

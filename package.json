@@ -5,8 +5,7 @@
     "type": "module",
     "lint-staged": {
         "*.{ts,tsx}": [
-            "eslint --fix",
-            "prettier --write"
+            "eslint --fix"
         ]
     },
     "scripts": {
@@ -19,7 +18,8 @@
         "test:ui": "vitest --ui",
         "a11y:test": "vitest run src/test/accessibility.test.tsx",
         "lint:a11y": "eslint src --ext .tsx,.ts --config .eslintrc.json",
-        "prepare": "husky"
+        "prepare": "husky",
+        "pre-commit": "npm run test"
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.1.11",

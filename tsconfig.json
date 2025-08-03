@@ -1,7 +1,23 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+    "files": [],
+    "references": [
+        { "path": "./tsconfig.app.json" },
+        { "path": "./tsconfig.node.json" }
+    ],
+    "compilerOptions": {
+        "strict": true
+    }
+
+    //Same as:
+
+    //   "compilerOptions": {
+    //   "noImplicitAny": true,
+    //   "noImplicitReturns": true,
+    //   "noImplicitThis": true,
+    //   "alwaysStrict": true,
+    //   "strictBindCallApply": true,
+    //   "strictNullChecks": true,
+    //   "strictFunctionTypes": true,
+    //   "strictPropertyInitialization": true
+    // }
 }

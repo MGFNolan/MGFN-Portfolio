@@ -16,14 +16,14 @@ A modern, responsive portfolio website showcasing my work as a frontend develope
 
 ### Prerequisites
 
--   Node.js 18+
+-   Node.js 22+
 -   npm or yarn
 
 ### Installation (SSH)
 
 ```bash
 git clone git@github.com:MGFNolan/MGFN-Portfolio.git
-cd portfolio
+cd MGFN-Portfolio
 npm install
 npm run dev
 ```

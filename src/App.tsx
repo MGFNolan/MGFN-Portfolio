@@ -1,12 +1,14 @@
 import "./App.css";
-import AccessibilityTest from "./components/AccessibilityTest";
-import HelloWorld from "./components/HelloWorld";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Page from "./components/Page";
 
 function App() {
     return (
-        <>
-            <HelloWorld /> <AccessibilityTest />
-        </>
+        <Page>
+            <Header />
+            <Main />
+        </Page>
     );
 }
 

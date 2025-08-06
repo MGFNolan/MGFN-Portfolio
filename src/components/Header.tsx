@@ -1,7 +1,7 @@
 import { type ReactElement } from "react";
 
 interface HeaderProps {
-    children?: ReactElement[];
+    children: ReactElement | ReactElement[];
 }
 
 export default function Header(props: HeaderProps) {

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import "./css/nav-bar.css";
+
 @theme {
     --primary: #0b004f;
     --secondary: #00bf63;
@@ -18,7 +20,8 @@ html {
     }
 }
 
-p {
+p,
+a {
     color: var(--secondary);
 }
 

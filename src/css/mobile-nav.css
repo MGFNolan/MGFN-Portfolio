@@ -1,0 +1,21 @@
+.mobile-nav-wrapper {
+    @apply fixed top-0 right-0 bottom-0 left-0 hidden justify-end pl-30;
+    @apply bg-white/30;
+    @apply z-9000;
+}
+
+.mobile-nav {
+    @apply flex h-full w-full max-w-96 min-w-65 flex-col items-start gap-y-18 bg-[var(--primary)] p-6 pl-7;
+
+    .mobile-nav__links {
+        @apply flex flex-col gap-y-15;
+
+        .mobile-nav__link-individual {
+            @apply relative flex flex-col font-medium transition-all duration-300 ease-in-out text-2xl;
+
+            .mobile-nav__link-individual__wrapper {
+                @apply flex cursor-pointer items-center gap-x-1.75;
+            }
+        }
+    }
+}

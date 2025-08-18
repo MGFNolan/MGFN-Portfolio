@@ -1,16 +1,21 @@
 import Header from "./components/Header";
 import Main from "./components/Main";
+import MobileNav from "./components/MobileNav";
 import NavBar from "./components/NavBar";
 import Page from "./components/Page";
+import MenuContextProvider from "./context/MobileMenuContext";
 
 function App() {
     return (
-        <Page>
-            <Header>
-                <NavBar />
-            </Header>
-            <Main />
-        </Page>
+        <MenuContextProvider>
+            <Page>
+                <Header>
+                    <NavBar />
+                    <MobileNav />
+                </Header>
+                <Main />
+            </Page>
+        </MenuContextProvider>
     );
 }
 

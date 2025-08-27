@@ -2,6 +2,7 @@
 
 @import "./css/nav-bar.css";
 @import "./css/mobile-nav.css";
+@import "./css/hero.css";
 
 @theme {
     --primary: #0b004f;
@@ -13,8 +14,7 @@
 }
 
 html {
-    background-color: var(--primary);
-    @apply text-[var(--secondary)];
+    @apply bg-[var(--primary)] text-[var(--secondary)];
 
     & * :focus {
         @apply outline-none ring-2 ring-red-600 ring-offset-2;
@@ -27,7 +27,6 @@ a {
 }
 
 :root {
-    @apply bg-black;
     scroll-behavior: smooth;
 }
 
@@ -106,7 +105,7 @@ h6 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: clamp(4rem, 8vw, 9rem);
     line-height: 1.2;
 }
 

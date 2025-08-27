@@ -6,6 +6,11 @@ on:
     pull_request:
         branches: [main]
 
+# Add concurrency to prevent multiple deployments
+concurrency:
+    group: "pages"
+    cancel-in-progress: true
+
 jobs:
     # First job: Comprehensive quality checks and build
     build-and-test:
@@ -32,12 +37,21 @@ jobs:
             - name: Run Unit and Component Tests
               run: npm run test:run
 
-            # Add accessibility testing as a quality gate
             - name: Run Accessibility Tests
               run: npm run test:run -- accessibility
 
             - name: Build Production Site
               run: npm run build
+
+            # Verify build output exists
+            - name: Verify build output
+              run: |
+                  if [ ! -d "./dist" ]; then
+                      echo "Build directory ./dist does not exist!"
+                      exit 1
+                  fi
+                  echo "Build directory contents:"
+                  ls -la ./dist
 
             # Only upload build artifacts if we're pushing to main (not on PRs)
             # and all previous steps have succeeded
@@ -58,6 +72,7 @@ jobs:
         runs-on: ubuntu-latest
 
         permissions:
+            contents: read # Added missing permission
             pages: write
             id-token: write
 
@@ -66,6 +81,9 @@ jobs:
             url: ${{ steps.deployment.outputs.page_url }}
 
         steps:
+            - name: Setup Pages
+              uses: actions/configure-pages@v4
+
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4

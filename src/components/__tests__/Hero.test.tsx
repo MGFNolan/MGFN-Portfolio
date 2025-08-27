@@ -33,7 +33,7 @@ describe("Hero component renders with the required elements", () => {
         expect(div).toHaveClass("hero__content");
     });
 
-    it("asserts that the Hero component has a h1 element with the relevant text content", () => {
+    it("asserts that the Hero component has a h1 element with the relevant text content for the title", () => {
         // Arrange
         render(<Hero />);
 
@@ -45,7 +45,7 @@ describe("Hero component renders with the required elements", () => {
         expect(h1).toHaveTextContent("Matthew Nolan");
     });
 
-    it("asserts that the Hero component has a p element with the relevant text content", () => {
+    it("asserts that the Hero component has a p element with the relevant text content for the subtitle", () => {
         // Arrange
         render(<Hero />);
 
@@ -55,5 +55,17 @@ describe("Hero component renders with the required elements", () => {
         //Assert
         expect(p).toBeInTheDocument();
         expect(p).toHaveTextContent("Software Developer");
+    });
+
+    it("asserts that the Hero component has a p element with the text content directing the user further into the page", () => {
+        // Arrange
+        render(<Hero />);
+
+        // Act
+        const p = screen.getByTestId("hero-more");
+
+        //Assert
+        expect(p).toBeInTheDocument();
+        expect(p).toHaveTextContent("My work, experience, and more");
     });
 });

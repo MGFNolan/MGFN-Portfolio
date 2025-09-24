@@ -3,6 +3,8 @@
 @import "./css/nav-bar.css";
 @import "./css/mobile-nav.css";
 @import "./css/hero.css";
+@import "./css/MyWork.css";
+@import "./css/MyWorkCard.css";
 
 @theme {
     --primary: #0b004f;
@@ -80,6 +82,8 @@ section:not(:first-of-type) {
 .container {
     justify-self: center;
     max-width: 75vw;
+    min-height: 100dvh;
+    padding-bottom: 10dvh;
 
     @media (max-width: 760px) {
         max-width: 90vw;
@@ -97,11 +101,6 @@ h6 {
     text-wrap: balance;
     margin: 2rem 0;
     letter-spacing: 0.1rem;
-
-    /* from Google Fonts
-    font-family: "Bangers", system-ui;
-    font-weight: 400;
-    font-style: normal; */
 }
 
 h1 {
@@ -208,6 +207,25 @@ svg {
 
 option {
     background: black;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: 2px solid var(--secondary);
+    font-weight: 700;
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--secondary);
+    cursor: pointer;
 }
 
 .mandatory {

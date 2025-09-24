@@ -1,0 +1,9 @@
+.my-work {
+    .my-work__card-container {
+        @apply grid grid-cols-3 gap-4;
+    }
+
+    .my-work__btn {
+        @apply flex m-auto w-[50%] justify-center;
+    }
+}

@@ -1,0 +1,18 @@
+.my-work-card {
+    @apply py-[5dvh];
+    .my-work-card__image {
+        @apply object-fill;
+    }
+
+    .my-work-card__link {
+        @apply flex justify-center text-xs;
+    }
+
+    .my-work-card__card-icons {
+        @apply flex justify-center gap-1.5 w-[100%] mt-1.5;
+
+        svg {
+            @apply size-3.5;
+        }
+    }
+}

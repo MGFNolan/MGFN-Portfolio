@@ -9,10 +9,6 @@
 @theme {
     --primary: #0b004f;
     --secondary: #00bf63;
-
-    --bp-mobile: 767px;
-    --bp-tablet: 1023px;
-    --bp-desktop: 1439px;
 }
 
 html {

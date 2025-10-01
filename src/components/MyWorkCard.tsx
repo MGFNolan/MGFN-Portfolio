@@ -1,4 +1,5 @@
 import type { MyWorkCard } from "../utils/contentTypes";
+import React from "react";
 
 interface MyWorkCardProps {
     myWorkCard: MyWorkCard;
@@ -43,20 +44,24 @@ export default function MyWorkCard({ myWorkCard }: MyWorkCardProps) {
             >
                 {myWorkCard.details}
             </p>
-            {myWorkCard.extraLinks.map((link) => {
-                return (
-                    <a
-                        key={link.label}
-                        href={link.href}
-                        className="my-work-card__extra-links"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        data-testid="work-card-extra-links"
-                    >
-                        {link.label}
-                    </a>
-                );
-            })}
+            <div className="my-work-card__extra-links-container">
+                {myWorkCard.extraLinks.map((link, index) => (
+                    <React.Fragment key={link.label}>
+                        <a
+                            href={link.href}
+                            className="my-work-card__extra-links"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-testid="work-card-extra-links"
+                        >
+                            {link.label}
+                        </a>
+                        {index < myWorkCard.extraLinks.length - 1 && (
+                            <span className="separator"> ◆ </span>
+                        )}
+                    </React.Fragment>
+                ))}
+            </div>
         </div>
     );
 }

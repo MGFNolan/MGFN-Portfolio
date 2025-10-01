@@ -1,11 +1,12 @@
 .my-work-card {
-    @apply py-[5dvh];
+    @apply py-[5dvh] mb-4;
+
     .my-work-card__image {
-        @apply object-fill;
+        @apply object-fill rounded-md border-2 border-[var(--secondary)];
     }
 
     .my-work-card__link {
-        @apply flex justify-center text-xs;
+        @apply flex justify-center text-xs font-semibold;
     }
 
     .my-work-card__card-icons {

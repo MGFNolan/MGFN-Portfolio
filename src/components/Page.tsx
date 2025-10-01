@@ -6,7 +6,7 @@ interface PageProps {
 
 function Page(props: PageProps) {
     return (
-        <div id="page-content" data-testid="page">
+        <>
             <a
                 href="#main-content"
                 data-testid="skip-to-main"
@@ -14,8 +14,10 @@ function Page(props: PageProps) {
             >
                 Skip to main content
             </a>
-            {props.children}
-        </div>
+            <div id="page-content" data-testid="page">
+                {props.children}
+            </div>
+        </>
     );
 }
 

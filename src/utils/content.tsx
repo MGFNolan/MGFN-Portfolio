@@ -1,8 +1,10 @@
 import { type MyWorkCard, type NavLink } from "./contentTypes";
 import hbccImg from "../images/hbcc-placeholder-image.png";
-import htmlIcon from "../icons/html.tsx";
-import cssIcon from "../icons/css.tsx";
-import javascriptIcon from "../icons/javascript.tsx";
+import {
+    HTML5,
+    CSS,
+    JavaScript,
+} from "../components/Icons//tech-icons/index.tsx";
 
 const NavLinksContent: NavLink[] = [
     {
@@ -39,17 +41,17 @@ const WorkCardContent: MyWorkCard[] = [
         alt: "placeholder image; shows the MVP of the Hebden Bridge Chess Club page",
         link: "https://hebdenbridgechessclub.netlify.app/",
         icons: [
-            { name: "HTML", icon: htmlIcon, alt: "HTML icon" },
-            { name: "CSS", icon: cssIcon, alt: "CSS icon" },
+            { name: "HTML", icon: HTML5, alt: "HTML icon" },
+            { name: "CSS", icon: CSS, alt: "CSS icon" },
             {
                 name: "JavaScript",
-                icon: javascriptIcon,
+                icon: JavaScript,
                 alt: "JavaScript icon",
             },
         ],
         title: "Hebden Bridge Chess Club",
         details:
-            "A website for a local chess club, built with vanilla HTML, CSS and JavaScript.",
+            "A website for a local chess club, built with React, HTML, Tailwind and JavaScript.",
         extraLinks: [
             {
                 href: "https://github.com/MGFN/hebden-bridge-chess-club",
@@ -63,12 +65,12 @@ const WorkCardContent: MyWorkCard[] = [
         alt: "placeholder image; shows the MVP of the Hebden Bridge Chess Club page",
         link: "https://hebdenbridgechessclub.netlify.app/",
         icons: [
-            { name: "HTML", icon: htmlIcon, alt: "HTML icon" },
-            { name: "CSS", icon: cssIcon, alt: "CSS icon" },
+            { name: "HTML", icon: HTML5, alt: "HTML icon" },
+            { name: "CSS", icon: CSS, alt: "CSS icon" },
         ],
         title: "Hebden Bridge Chess Club",
         details:
-            "A website for a local chess club, built with vanilla HTML, CSS and JavaScript.",
+            "A website for a local chess club, built with React, HTML, Tailwind and JavaScript.",
         extraLinks: [
             {
                 href: "https://github.com/MGFN/hebden-bridge-chess-club",
@@ -82,17 +84,17 @@ const WorkCardContent: MyWorkCard[] = [
         alt: "placeholder image; shows the MVP of the Hebden Bridge Chess Club page",
         link: "https://hebdenbridgechessclub.netlify.app/",
         icons: [
-            { name: "HTML", icon: htmlIcon, alt: "HTML icon" },
-            { name: "CSS", icon: cssIcon, alt: "CSS icon" },
+            { name: "HTML", icon: HTML5, alt: "HTML icon" },
+            { name: "CSS", icon: CSS, alt: "CSS icon" },
             {
                 name: "JavaScript",
-                icon: javascriptIcon,
+                icon: JavaScript,
                 alt: "JavaScript icon",
             },
         ],
         title: "Hebden Bridge Chess Club",
         details:
-            "A website for a local chess club, built with vanilla HTML, CSS and JavaScript.",
+            "A website for a local chess club, built with React, HTML, Tailwind and JavaScript.",
         extraLinks: [
             {
                 href: "https://github.com/MGFN/hebden-bridge-chess-club",

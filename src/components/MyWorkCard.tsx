@@ -1,6 +1,5 @@
 import type { MyWorkCard } from "../utils/contentTypes";
 import React from "react";
-import ImageWithFallback from "./ImageWithFallback";
 
 interface MyWorkCardProps {
     myWorkCard: MyWorkCard;
@@ -9,9 +8,11 @@ interface MyWorkCardProps {
 export default function MyWorkCard({ myWorkCard }: MyWorkCardProps) {
     return (
         <div className="my-work-card" data-testid="my-work-card">
-            <ImageWithFallback
+            <img
+                aria-hidden="true"
                 src={myWorkCard.img}
                 alt={myWorkCard.alt}
+                onError={(e) => (e.currentTarget.style.display = "none")}
                 data-testid="work-card-image"
                 className="my-work-card__image"
             />

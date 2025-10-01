@@ -22,4 +22,4 @@ const CSS = (props: SVGProps<SVGSVGElement>) => (
         />
     </svg>
 );
-export default CSS;
+export { CSS };

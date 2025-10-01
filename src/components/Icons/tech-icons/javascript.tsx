@@ -14,4 +14,4 @@ const JavaScript = (props: SVGProps<SVGSVGElement>) => (
         />
     </svg>
 );
-export default JavaScript;
+export { JavaScript };

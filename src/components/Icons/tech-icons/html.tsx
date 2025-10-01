@@ -19,4 +19,4 @@ const HTML5 = (props: SVGProps<SVGSVGElement>) => (
         />
     </svg>
 );
-export default HTML5;
+export { HTML5 };

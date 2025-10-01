@@ -29,7 +29,6 @@ describe("Hero component renders with the required elements", () => {
 
         //Assert
         expect(div).toBeInTheDocument();
-        expect(div).toHaveClass("container");
         expect(div).toHaveClass("hero__content");
     });
 

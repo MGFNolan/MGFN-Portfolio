@@ -6,12 +6,9 @@ export default function Hero() {
             id="hero"
             aria-label="Hero section: introduction to Matthew Nolan's Portfolio"
             data-testid="hero"
-            className="hero"
+            className="hero container"
         >
-            <div
-                className="container hero__content"
-                data-testid="hero-container"
-            >
+            <div className="hero__content" data-testid="hero-container">
                 <h1 data-testid="hero-title" className="hero__content__title">
                     Matthew Nolan
                 </h1>

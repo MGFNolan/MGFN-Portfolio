@@ -16,10 +16,10 @@
 }
 
 .hero {
-    @apply min-h-dvh;
+    @apply flex flex-col justify-center;
 
     .hero__content {
-        @apply m-auto flex flex-col justify-center text-center pt-[20dvh];
+        @apply m-auto flex flex-col justify-center text-center;
 
         .hero__content__subtitle {
             @apply text-[clamp(1.5rem,3vw,6rem)];
@@ -34,7 +34,7 @@
     }
 
     .hero__more {
-        @apply text-center pt-[20dvh] flex flex-col gap-5;
+        @apply text-center flex flex-col gap-5;
 
         & > * {
             @apply m-auto;

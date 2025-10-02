@@ -9,7 +9,7 @@ assignees: MGFNolan
 
 **User Story**
 
-_As a user
+_As a visitor of the site,
 I want 
 So that _
 
@@ -17,4 +17,7 @@ So that _
 
 **Acceptance Criteria:**
 
+- [ ] Tests pass
+- [ ] Responsive
+- [ ] Maintain branding
 - [ ]

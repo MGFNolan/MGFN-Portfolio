@@ -17,4 +17,4 @@ So that _
 
 **Acceptance Criteria:**
 
-[] -
+- [ ]

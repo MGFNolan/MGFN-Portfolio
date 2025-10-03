@@ -49,7 +49,6 @@ const WorkCardContent: MyWorkCard[] = [
         id: "1",
         img: hbccImg,
         alt: "placeholder image; shows the MVP of the Hebden Bridge Chess Club page",
-        link: "https://hebdenbridgechessclub.netlify.app/",
         icons: [
             { name: "HTML", icon: HTML5, alt: "HTML icon" },
             { name: "CSS", icon: CSS, alt: "CSS icon" },
@@ -69,6 +68,10 @@ const WorkCardContent: MyWorkCard[] = [
             "A website for a local chess club, built with React, HTML, Tailwind and JavaScript.",
         extraLinks: [
             {
+                href: "https://hebdenbridgechessclub.netlify.app/",
+                label: "Live Project",
+            },
+            {
                 href: "https://github.com/MGFN/hebden-bridge-chess-club",
                 label: "GitHub",
             },
@@ -78,7 +81,6 @@ const WorkCardContent: MyWorkCard[] = [
         id: "2",
         img: mnPortfolioImg,
         alt: "placeholder image; shows the first section of this website",
-        link: "https://mgfnolan.github.io/MGFN-Portfolio/",
         icons: [
             { name: "HTML", icon: HTML5, alt: "HTML icon" },
             { name: "CSS", icon: CSS, alt: "CSS icon" },
@@ -98,6 +100,10 @@ const WorkCardContent: MyWorkCard[] = [
         details: "My portfolio website, which is in progress, built in React.",
         extraLinks: [
             {
+                href: "https://mgfnolan.github.io/MGFN-Portfolio/",
+                label: "Live Project",
+            },
+            {
                 href: "https://github.com/MGFNolan/MGFN-Portfolio",
                 label: "GitHub",
             },
@@ -107,7 +113,6 @@ const WorkCardContent: MyWorkCard[] = [
         id: "3",
         img: goTravelImg,
         alt: "placeholder image; shows the hero component of the GoTravel website",
-        link: "https://google.com",
         icons: [
             { name: "HTML", icon: HTML5, alt: "HTML icon" },
             { name: "CSS", icon: CSS, alt: "CSS icon" },
@@ -133,6 +138,10 @@ const WorkCardContent: MyWorkCard[] = [
         details:
             "A website for a fictional travel agents, following Chad Casey's tutorial.",
         extraLinks: [
+            {
+                href: "https://github.com/MGFNolan/",
+                label: "Live Project",
+            },
             {
                 href: "https://github.com/MGFNolan/GoTravelLandingPage",
                 label: "GitHub",

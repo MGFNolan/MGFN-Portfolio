@@ -21,7 +21,6 @@ interface MyWorkCard {
     id: string;
     img: string;
     alt: string;
-    link: string;
     icons: WorkCardTechnologyIcon[];
     title: string;
     details: string;

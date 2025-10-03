@@ -47,7 +47,13 @@ export default function MobileNav() {
                 className="mobile-nav"
                 aria-label="Mobile navigation"
             >
-                <Close />
+                <div className="w-full">
+                    <Close
+                        onClick={() => setMenuOpened(false)}
+                        aria-label="Close mobile navigation menu"
+                        buttonClassName="ml-auto"
+                    />
+                </div>
                 <motion.ul
                     animate={menuOpened ? "visible" : "hidden"}
                     variants={{

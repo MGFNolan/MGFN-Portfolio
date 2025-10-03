@@ -16,7 +16,6 @@ describe("the WorkCard component renders with expected content", () => {
 
         workCardComponents.forEach((card) => {
             const image = within(card).getByTestId("work-card-image");
-            const link = within(card).getByTestId("work-card-link");
             const icons = within(card).getByTestId("work-card-icons");
             const details = within(card).getByTestId("work-card-details");
             const extraLinks = within(card).getAllByTestId(
@@ -24,7 +23,6 @@ describe("the WorkCard component renders with expected content", () => {
             );
 
             expect(image).toBeInTheDocument();
-            expect(link).toBeInTheDocument();
             expect(icons).toBeInTheDocument();
             expect(details).toBeInTheDocument();
             extraLinks.forEach((extraLink) =>

@@ -3,8 +3,9 @@
 @import "./css/nav-bar.css";
 @import "./css/mobile-nav.css";
 @import "./css/hero.css";
-@import "./css/MyWork.css";
-@import "./css/MyWorkCard.css";
+@import "./css/my-work.css";
+@import "./css/my-work-card.css";
+@import "./css/my-work-modal.css";
 
 @theme {
     --primary: #0b004f;

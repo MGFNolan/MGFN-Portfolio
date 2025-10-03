@@ -1,0 +1,34 @@
+.my-work-modal {
+    @apply fixed inset-0 z-[1000] flex items-center justify-center bg-black/75;
+    .my-work-modal__content {
+        @apply relative w-[90dvw] h-[90dvh] overflow-y-auto rounded-lg bg-[var(--secondary)] p-8;
+    }
+
+    .my-work-modal__close-button {
+        @apply absolute top-[10px] right-[15px] cursor-pointer border-none bg-transparent text-[2rem] leading-none text-amber-300;
+    }
+
+    .my-work-modal__image {
+        @apply mb-4 h-auto w-full rounded;
+    }
+
+    .my-work-modal__title {
+        @apply mt-0;
+    }
+
+    .my-work-modal__icons {
+        @apply my-4 flex gap-4 text-2xl;
+    }
+
+    .my-work-modal__links {
+        @apply mt-4;
+    }
+
+    .my-work-modal__link {
+        @apply text-[var(--primary)] no-underline;
+    }
+
+    .my-work-modal__link:hover {
+        @apply underline;
+    }
+}

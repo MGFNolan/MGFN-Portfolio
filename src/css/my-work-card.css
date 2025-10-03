@@ -1,0 +1,23 @@
+.my-work-card {
+    @apply py-[5dvh] mb-4;
+
+    .my-work-card__modal-button {
+        @apply p-0 m-0 w-full border-none bg-transparent text-left cursor-pointer;
+    }
+
+    .my-work-card__image {
+        @apply object-fill rounded-md border-2 border-[var(--secondary)];
+    }
+
+    .my-work-card__link {
+        @apply flex justify-center text-xs font-semibold;
+    }
+
+    .my-work-card__card-icons {
+        @apply flex justify-center gap-1.5 w-[100%] mt-1.5;
+
+        svg {
+            @apply size-3.5;
+        }
+    }
+}
